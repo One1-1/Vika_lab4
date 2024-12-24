@@ -6,7 +6,7 @@
 """
 
 from package_lab4.lab2 import task2_1, task2_2, task2_3, task2_4
-from package_lab4.lab3 import task3_1, task3_2, task3_3
+from package_lab4.lab3 import task3_1, task3_2, task3_3, task3_3_rec
 
 
 def menu():
@@ -60,7 +60,9 @@ if __name__ == '__main__':
                 case 3:
                     x = float(input('Введите x: '))  # значение x, для которого нужно вычислить ln(1 + x)
                     eps = float(input('Введите точность: '))  # заданная точность
-                    print(task3_3(x, eps))
+                    task3_3(x, eps)
+                    print('Вывод с использованием рекурсии: ')
+                    task3_3_rec(x, eps)
                 case _:
                     break
         if input('Продолжить? Да/Нет: ') == 'Нет'.lower(): break
